@@ -1,13 +1,17 @@
 # docker-bionic-vnc
 
-Simple and minimal Docker image providing Xfce4 Desktop, VNC server and SSH daemon.
+Simple Docker image providing Xfce4 desktop, VNC server and SSH daemon.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1796022/38460477-b860d604-3aba-11e8-98ce-6f5b890d79df.png">
+</p>
 
 #### Configuration
 
-To set up remote X framebuffer display resolution open `Dockerfile` and edit
+To set up remote X framebuffer display resolution open `xvfb` file and edit this line:
 
 ```sh
-ENV SCREEN 1920x1080x24
+XVFBARGS=":99 -screen 0 1920x1080x24 -ac +extension GLX +render -noreset"
 ```
 
 #### Build Image

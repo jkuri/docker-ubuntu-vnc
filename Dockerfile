@@ -1,7 +1,5 @@
 FROM ubuntu:bionic
 
-ENV DISPLAY :99
-ENV RESOLUTION '1920x1080x24'
 ENV TZ 'Europe/Ljubljana'
 
 RUN apt-get update && echo $TZ > /etc/timezone && \
