@@ -9,7 +9,7 @@
 ### END INIT INFO
 
 XVFB=/usr/bin/Xvfb
-XVFBARGS=":99 -screen 0 1920x1080x24 -ac +extension GLX +render -noreset"
+XVFBARGS=":99 -screen 0 3840x2160x24 -ac +extension GLX +render -noreset"
 PIDFILE=/var/run/xvfb.pid
 case "$1" in
   start)

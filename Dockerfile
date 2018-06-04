@@ -7,9 +7,10 @@ RUN apt-get update && echo $TZ > /etc/timezone && \
     rm /etc/localtime && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata && \
-    apt-get install -y openssh-server xfce4 xfce4-goodies x11vnc sudo bash xvfb && \
+    apt-get install -y openssh-server xubuntu-desktop x11vnc sudo bash xvfb && \
     useradd -ms /bin/bash ubuntu && echo 'ubuntu:ubuntu' | chpasswd && \
-    echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && apt-get clean
+    echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
+    apt-get clean autoclean && apt-get autoremove -y && rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 USER ubuntu
 WORKDIR /home/ubuntu
