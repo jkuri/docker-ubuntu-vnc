@@ -1,5 +1,6 @@
 FROM ubuntu:bionic
 
+ENV DEBIAN_FRONTEND noninteractive
 ENV TZ 'Europe/Ljubljana'
 
 RUN apt-get update && echo $TZ > /etc/timezone && \
