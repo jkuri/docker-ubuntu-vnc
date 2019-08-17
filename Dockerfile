@@ -1,4 +1,4 @@
-FROM ubuntu:18.10
+FROM ubuntu:19.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ 'Europe/Ljubljana'
